@@ -1,0 +1,51 @@
+<div class="login-container">
+    <div class="events-container">
+      <div class="events-content">
+        <h2>Welcome to Our Hospital Management System</h2>
+        <p>Stay informed about our latest events and updates.</p>
+        <p>Our software is designed to help you manage your hospital more efficiently with the latest technology. 
+           From patient management to staff coordination, our system streamlines operations and enhances productivity.</p>
+        <p>Experience the power of modern healthcare management, ensuring your hospital runs smoothly and effectively.</p>
+        <p>With real-time data tracking and automated processes, you can focus more on patient care while we handle the logistics.</p>
+      </div>
+    </div>
+    
+    <div class="login-form-container">
+      <img src="assets/mainlogo.png" alt="Login Image" class="login-image">
+      <div class="login-form">
+
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+          <!-- Afficher le message d'erreur -->
+          <div *ngIf="errorMessage" class="alert alert-danger">
+            {{ errorMessage }}
+          </div>
+  
+          <label for="userName">Username</label>
+          <input type="text" ngModel name="userName" id="userName" placeholder="Enter your username" class="form-control mb-3">
+          
+          <label for="userPassword">Password</label>
+          <input type="password" ngModel name="userPassword" id="userPassword" placeholder="Enter your password" class="form-control mb-3">
+          
+          <div class="button-group">
+            <input type="submit" value="Login" class="btn btn-outline-primary rounded-1 mb-3">
+            <button type="button" class="btn btn-outline-secondary rounded-1 mb-3" (click)="resetForm(loginForm)">Cancel</button>
+          </div>
+          
+          <hr>
+          <a href="#" class="forgot-password-link">Forgot Your Password?</a>
+        </form>
+
+        
+      </div>
+    </div>
+  
+    <div class="moving-balls">
+      <div class="ball ball1"></div>
+      <div class="ball ball2"></div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <p>© 2024 Top Hospital, Inc. All rights reserved. | <a href="#">Bijou Joseph Nathanael</a></p>
+  </footer>
+  

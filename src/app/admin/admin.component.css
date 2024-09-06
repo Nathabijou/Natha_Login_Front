@@ -1,0 +1,149 @@
+/* Style pour la barre de navigation */
+.navbar-custom {
+    background-color: #51bec2;
+    border-bottom: 1px solid #0056b3;
+    padding: 0 1rem;
+}
+
+.navbar-custom .login-image {
+    height: 60px;
+    width: auto;
+    margin-right: 5rem;
+}
+
+.navbar-custom .navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-custom .navbar-nav .nav-link.active, 
+.navbar-custom .navbar-nav .nav-link:hover {
+    background-color: #0056b3;
+    border-radius: 0.25rem;
+}
+
+.navbar-custom .navbar-user {
+    display: flex;
+    align-items: center;
+}
+
+.user-photo {
+    height: 40px;  /* Taille de la photo */
+    width: 40px;   /* Largeur de la photo, fixe pour un affichage rond */
+    border-radius: 50%;  /* Assure un affichage rond */
+    object-fit: cover;  /* Adapte la photo à l'espace sans déformation */
+    margin-right: 0.5rem; /* Espace entre la photo et le nom */
+    display: inline-block; /* Assure que l'image s'affiche inline avec le nom */
+}
+
+
+
+
+
+
+/*Ajout de l'icone Photo*/
+
+.photo-container {
+    width: 55px; /* taille de la partie ronde */
+    height: 55px; /* taille de la partie ronde */
+    border-radius: 50%; /* rend la div ronde */
+    background-color: #f0f0f0; /* couleur de fond, optionnelle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* nécessaire pour positionner le menu déroulant */
+    font-size: 20px; /* taille de l'icône */
+    color: #333; /* couleur de l'icône */
+}
+
+.photo-container i {
+    margin: 0; /* enlève les marges de l'icône */
+}
+
+.dropdown-menu {
+    display: none; /* masque le menu déroulant par défaut */
+    position: absolute; /* positionne le menu déroulant */
+    top: 110%; /* place le menu juste en dessous de l'image */
+    right: 0;
+    background-color: #fff; /* couleur de fond du menu */
+    border: 1px solid #eaefef; /* bordure du menu */
+    font-family: sans-serif;
+    border-radius: 7px; /* coins arrondis du menu */
+    box-shadow: 0 6px 12px rgba(155, 160, 171, 0.677); /* ombre portée du menu */
+    min-width: 200px; /* largeur minimale du menu */
+    z-index: 1000; /* assure que le menu est au-dessus des autres éléments */
+    opacity: 0; /* rend le menu invisible par défaut */
+    transition: opacity 0.3s ease; /* animation de l'opacité pour un effet plus fluide */
+    padding: 0; /* enlève les espacements par défaut */
+}
+
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -8px; /* positionne la flèche au-dessus du menu */
+    right: 17px; /* positionne la flèche par rapport au menu */
+    border-width: 10px; /* taille de la flèche */
+    border-style: solid;
+    font-family: 'Roboto', sans-serif;
+    border-color: transparent transparent #fff transparent; /* couleur de la flèche */
+    border-top-width: 0; /* enlève la partie supérieure de la bordure */
+}
+
+.navbar-user:hover .dropdown-menu {
+    display: block; /* affiche le menu déroulant au survol */
+    opacity: 1; /* rend le menu visible */
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 12px 16px; /* espacement des éléments du menu */
+    font-size: 17px; /* taille du texte */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: normal; /* ou bold si tu veux du texte en gras */
+    color: #324a61; /* couleur du texte */
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease; /* animation de la couleur de fond et du texte */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #e2e5e5; /* couleur de fond au survol des éléments du menu */
+    color: #007bff; /* couleur du texte au survol */
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(147, 176, 237, 0.677);
+}
+
+.dropdown-menu .dropdown-divider {
+    margin: 8px 0; /* espacement des lignes de séparation */
+}
+
+
+
+
+
+
+.nav-item {
+    position: relative;
+  }
+  
+  .nav-item:hover .tooltip-content {
+    display: block;
+  }
+  
+  .tooltip-content {
+    display: none; /* Assure que le panneau est caché par défaut */
+    position: absolute; /* Positionne le panneau par rapport à .nav-item */
+    top: 100%; /* Positionne le panneau juste en dessous de l'élément */
+    left: -100%; /* Déplace le panneau vers la gauche par rapport à l'élément */
+    transform: translateX(-100%); /* Ajuste la position horizontale */
+    z-index: 10; /* Assure que le panneau est au-dessus des autres éléments */
+    background-color: #333; /* Fond du panneau */
+    color: #fff; /* Couleur du texte du panneau */
+    padding: 5px; /* Espacement interne du panneau */
+    border-radius: 4px; /* Coins arrondis du panneau */
+  }
+  
+  
